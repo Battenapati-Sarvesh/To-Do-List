@@ -1,0 +1,87 @@
+*{
+    background-color: rgb(7, 2, 17);
+}
+.container{
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+    
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 30px;
+    
+}
+input{
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    
+    outline: none;
+    
+}
+button{
+    border: none;
+    outline: none;
+    background: skyblue;
+    cursor: pointer;
+    padding: 16px 50px;
+    border-radius: 40px;
+    font-size: 16px;
+    
+
+}
+ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    color: rgb(134, 224, 134);
+    position: relative;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+ul li.checked{
+    color: red;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-color: black;
+    background-image: url(tick.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: red;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: rgb(226, 108, 108);
+}
